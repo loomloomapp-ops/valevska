@@ -1,0 +1,210 @@
+/* ============================================================
+   DESKTOP COMPACT OVERRIDES
+   Loaded AFTER styles-desktop.css. Tightens vertical rhythm,
+   type scale, paddings, and gaps so the desktop version reads
+   denser without losing hierarchy. Mobile (styles.css) is not
+   affected — this file is only linked from desktop.html.
+   ============================================================ */
+
+:root {
+  --max: 1180px;
+  --gutter: 40px;
+}
+
+/* --- NAV -------------------------------------------------- */
+.nav-inner { padding: 12px var(--gutter); }
+.brandmark .mono { width: 34px; height: 34px; font-size: 15px; }
+.brandmark .bm-text span { font-size: 15px; }
+.brandmark .bm-text small { font-size: 10px; }
+.nav-links { gap: 26px; }
+.nav-links a { font-size: 13.5px; }
+.nav-cta { padding: 9px 18px; font-size: 12.5px; }
+
+/* --- SECTIONS / TYPE -------------------------------------- */
+.section { padding: 56px 0 0; }
+.section-eyebrow { margin-bottom: 10px; font-size: 14px; letter-spacing: .2em; }
+.section-eyebrow::before { width: 32px; }
+.section-title { font-size: 42px; line-height: .98; max-width: 780px; }
+.section-lead { margin-top: 14px; font-size: 16px; max-width: 640px; }
+
+/* --- CTA / pill ------------------------------------------- */
+.cta { padding: 18px 44px; font-size: 16px; border-radius: 14px; }
+.pill { padding: 9px 18px; font-size: 13px; }
+
+/* --- HERO ------------------------------------------------- */
+.hero { min-height: 520px; }
+.hero-grid {
+  padding: 44px 0 40px;
+  gap: 36px;
+  min-height: 520px;
+}
+.hero-title .l1 { font-size: 64px; line-height: .96; }
+.hero-title .l2 { font-size: 60px; margin-top: 6px; line-height: .94; }
+.hero-title .l3 { font-size: 22px; margin-top: 14px; }
+.hero-eyebrow { margin-bottom: 20px; }
+.hero-right { gap: 14px; max-width: 420px; }
+.nameplate { padding: 18px 24px; border-radius: 18px; }
+.nameplate .title { font-size: 24px; }
+.nameplate .sub { font-size: 13px; }
+.desc-card { padding: 22px 24px; border-radius: 18px; }
+.desc-card p { font-size: 16px; line-height: 1.5; }
+
+/* --- ABOUT ------------------------------------------------ */
+.about-section-d { padding: 56px 0 40px; }
+.about-wrap-d,
+.about-grid {
+  gap: 44px;
+  margin-top: 24px;
+  align-items: center;
+}
+.about-text-d { padding-right: 24px; }
+.about-name-d,
+.about-name { font-size: 46px; }
+.about-body-d,
+.about-body { margin-top: 18px; font-size: 16px; line-height: 1.6; }
+.about-body-d p + p,
+.about-body p + p { margin-top: 12px; }
+.about-row-d { gap: 14px; }
+.ig-chip { margin-top: 0; padding: 10px 18px 10px 14px; font-size: 14px; }
+.ig-chip svg { width: 18px; height: 18px; }
+.about-photo-d,
+.about-photo { border-radius: 20px; }
+
+/* --- RESULTS ---------------------------------------------- */
+.stat-grid { margin-top: 26px; gap: 12px; }
+.stat-card { padding: 18px 22px; border-radius: 16px; gap: 14px; }
+.stat-card .icon { width: 48px; height: 48px; border-radius: 12px; }
+.stat-card .icon svg { width: 22px; height: 22px; }
+.stat-card .num { font-size: 26px; }
+.stat-card .lbl { font-size: 13px; }
+
+.results-cols { gap: 36px; margin-top: 28px; }
+.checklist { gap: 12px; }
+.checklist li { font-size: 15px; padding-left: 36px; }
+.checklist li .ic { width: 22px; height: 22px; }
+.checklist li .ic svg { width: 11px; height: 11px; }
+
+.callout {
+  margin-top: 24px;
+  padding: 18px 26px;
+  font-size: 16px;
+  border-radius: 16px;
+}
+
+/* --- TEAM / WHO-WE-LOOK-FOR ------------------------------- */
+.team-grid { gap: 24px; margin-top: 28px; }
+.team-col { padding: 24px 26px; border-radius: 20px; }
+.team-col h3 { font-size: 26px; margin-bottom: 20px; }
+.xlist { gap: 12px; }
+.xlist li { font-size: 15px; padding-left: 36px; }
+.xlist li .ic { width: 22px; height: 22px; }
+.team-cta-row { margin-top: 24px; }
+
+/* --- BRAND ------------------------------------------------ */
+.brand-grid { gap: 56px; margin-top: 36px; }
+.brand-text .lead { font-size: 16px; line-height: 1.55; }
+.brand-head-d { gap: 24px; }
+.brand-logo-d { border-radius: 18px; }
+.brand-body-d p { font-size: 16px; line-height: 1.55; }
+.brand-body-d p + p { margin-top: 10px; }
+
+.country-title { margin-top: 28px; font-size: 13px; }
+.country-grid,
+.brand-countries-d {
+  margin-top: 12px;
+  gap: 4px 22px;
+  font-size: 14px;
+}
+.country-grid div { padding: 4px 0; }
+.country-grid .flag { font-size: 15.5px; }
+
+.cert-row,
+.cert-grid-d {
+  gap: 10px;
+  margin-top: 24px;
+}
+.cert-pill { padding: 12px 16px; border-radius: 12px; }
+.cert-pill b { font-size: 13px; }
+.cert-pill span { font-size: 12px; }
+
+.brand-callout-d {
+  margin-top: 20px;
+  padding: 16px 24px;
+  font-size: 15px;
+  border-radius: 14px;
+}
+.brand-cert-text-d { font-size: 15px; margin-top: 18px; }
+
+.brand-products-row-d { margin: 22px auto 6px; min-height: 200px; }
+
+/* --- PRODUCTS / CATEGORIES -------------------------------- */
+.cat-list-d {
+  margin-top: 26px;
+  gap: 10px;
+}
+.cat-list-d li,
+.product-grid .item {
+  padding: 14px 18px;
+  font-size: 15px;
+  border-radius: 14px;
+}
+.product-grid { gap: 10px; margin-top: 26px; }
+.product-grid .n,
+.cat-list-d .n { font-size: 20px; }
+
+.product-lead { font-size: 16px; margin-top: 14px; }
+.cat-eyebrow-d { margin-top: 26px; font-size: 14px; }
+
+.product-banner-slider-d { margin-top: 32px; }
+
+/* --- SLIM (legacy banner block, if used) ------------------ */
+.slim {
+  margin-top: 28px;
+  padding: 28px 36px;
+  gap: 36px;
+  border-radius: 20px;
+}
+.slim-badge { padding: 8px 22px; font-size: 14px; }
+.slim h3 { margin-top: 14px; font-size: 34px; }
+.slim p { margin-top: 10px; font-size: 15px; }
+
+/* --- INCOME ----------------------------------------------- */
+.income-head-d { margin-top: 8px; }
+.coin-row { margin-top: 18px; }
+.coin { width: 52px; height: 52px; font-size: 22px; margin-left: -10px; }
+.income-lead { font-size: 16px; }
+.income-list {
+  gap: 10px 36px;
+  margin-top: 24px;
+  max-width: 920px;
+}
+
+/* --- FORMATS / AUDIENCES ---------------------------------- */
+.fmt-grid { gap: 16px; margin-top: 26px; }
+.fmt-card { padding: 22px 26px; border-radius: 20px; }
+.fmt-card .tag { padding: 7px 18px; font-size: 13px; margin-bottom: 14px; }
+.fmt-card .fmt-title { font-size: 24px; margin-bottom: 10px; }
+.fmt-card .fmt-desc { font-size: 15.5px; line-height: 1.5; }
+
+.who-list { gap: 10px 36px; margin-top: 26px; max-width: 920px; }
+
+/* --- TESTIMONIALS ----------------------------------------- */
+.tm-grid { gap: 12px; margin-top: 26px; }
+.tm-card { padding: 22px 22px 20px; }
+.tm-name { font-size: 14.5px; }
+.tm-body { font-size: 14.5px; line-height: 1.5; }
+.tm-slider { margin-top: 22px; }
+.tm-slide { flex: 0 0 33%; aspect-ratio: 9/13; }
+.tm-controls { margin-top: 14px; }
+
+/* --- FINAL CTA / FOOTER ----------------------------------- */
+.final {
+  margin: 56px auto 0;
+  padding: 40px 48px;
+  border-radius: 26px;
+}
+.final h3 { font-size: 36px; max-width: 720px; }
+.final p { font-size: 16px; margin: 18px auto 0; max-width: 540px; }
+.final .cta { margin-top: 26px; padding: 20px 56px; font-size: 17px; }
+
+.foot { margin-top: 36px; padding: 20px var(--gutter); font-size: 12.5px; }
