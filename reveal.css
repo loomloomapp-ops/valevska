@@ -1,0 +1,58 @@
+/* Scroll-reveal animations — applied via reveal.js (adds [data-reveal]) */
+
+[data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 28px, 0);
+  transition:
+    opacity 900ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 900ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+[data-reveal].is-revealed {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Photo-style elements rise from slightly lower + scale in subtly */
+[data-reveal-kind="photo"] {
+  transform: translate3d(0, 36px, 0) scale(0.985);
+}
+[data-reveal-kind="photo"].is-revealed {
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+/* CTAs get a soft pop on entrance (pulse animation still continues afterwards) */
+[data-reveal-kind="cta"] {
+  transform: translate3d(0, 20px, 0) scale(0.97);
+  transition-duration: 700ms;
+}
+[data-reveal-kind="cta"].is-revealed {
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+/* Polaroid pairs subtly rotate into place using their existing transform */
+[data-reveal-kind="polaroid"] {
+  opacity: 0;
+  transform: translate3d(0, 28px, 0) rotate(0deg);
+  transition:
+    opacity 900ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 900ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+[data-reveal-kind="polaroid"].is-revealed {
+  opacity: 1;
+  /* let the source-class rotate (.r-1 / .r-2 / .r-3 / .r-4) take over */
+  transform: none;
+}
+
+/* Disable when the user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal],
+  [data-reveal-kind] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
