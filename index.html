@@ -6,18 +6,29 @@
 <title>YULIIA&amp;MAX — Міжнародний бізнес у сфері здоров'я та краси</title>
 <meta name="description" content="YULIIA&MAX — Міжнародний бізнес у сфері здоров'я та краси. ТОП-2 Іспанія, 45 264 партнерів у структурі." />
 <style>
-  html,body{margin:0;background:#0d030a;color:#f4ead9;font-family:system-ui,sans-serif}
-  .loading{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;font-size:14px;letter-spacing:.2em;text-transform:uppercase;color:rgba(244,234,217,.55)}
+  html, body { margin: 0; padding: 0; height: 100%; background: #0d030a; overflow: hidden; }
+  #view { display: block; width: 100vw; height: 100dvh; height: 100vh; border: 0; }
+  @supports (height: 100dvh) { #view { height: 100dvh; } }
 </style>
-<script>
-  (function () {
-    var isDesktop = window.matchMedia('(min-width: 880px)').matches;
-    var target = isDesktop ? 'desktop.html' : 'mobile.html';
-    location.replace(target + window.location.search + window.location.hash);
-  })();
-</script>
 </head>
 <body>
-  <div class="loading">YULIIA&amp;MAX</div>
+<iframe id="view" title="YULIIA&amp;MAX" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+<script>
+  (function () {
+    var frame = document.getElementById('view');
+    var mq = window.matchMedia('(min-width: 880px)');
+    function pick() {
+      var target = mq.matches ? 'desktop.html' : 'mobile.html';
+      target += location.search + location.hash;
+      var current = frame.getAttribute('src') || '';
+      if (current.split('?')[0].split('#')[0] !== target.split('?')[0].split('#')[0]) {
+        frame.src = target;
+      }
+    }
+    pick();
+    if (mq.addEventListener) mq.addEventListener('change', pick);
+    else if (mq.addListener) mq.addListener(pick);
+  })();
+</script>
 </body>
 </html>

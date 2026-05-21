@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <script>
   (function () {
+    if (window.self !== window.top) return;
     if (window.matchMedia('(min-width: 880px)').matches) {
       location.replace('desktop.html' + location.search + location.hash);
     }
