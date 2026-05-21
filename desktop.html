@@ -3,6 +3,16 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<script>
+  (function () {
+    if (!window.matchMedia('(min-width: 880px)').matches) {
+      location.replace('mobile.html' + location.search + location.hash);
+    }
+    window.matchMedia('(min-width: 880px)').addEventListener('change', function (e) {
+      if (!e.matches) location.replace('mobile.html' + location.search + location.hash);
+    });
+  })();
+</script>
 <title>YULIIA&amp;MAX — Міжнародний бізнес у сфері здоров'я та краси</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
