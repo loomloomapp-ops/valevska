@@ -8,31 +8,33 @@
   if (!('IntersectionObserver' in window)) return;
 
   // Selectors covering both mobile (.foo) and desktop (.foo-d) layouts.
+  // IMPORTANT: never include elements that are absolutely positioned or that
+  // carry their own transform in CSS (translateX(-50%), rotate, etc.), because
+  // [data-reveal] overrides `transform` and would visually break them.
   var GENERIC = [
-    // Hero — mobile
+    // Hero text-side content only (NOT the photo layer)
     '.hero .pill',
     '.hero .l1-row', '.hero .l1', '.hero .l2', '.hero .l3',
-    '.hero .nameplate', '.hero .desc-card', '.hero .cta',
-    // Hero — desktop
+    '.hero .nameplate', '.hero .desc-card',
+    // Hero — desktop (text side only)
     '.hero .hero-title-d', '.hero .hero-l1-d', '.hero .hero-l2-d', '.hero .hero-l3-d',
     '.hero .nameplate-d', '.hero .desc-card-d',
     // Section heads
     '.section-eyebrow', '.section-title', '.section-lead',
     '.eyebrow-d', '.section-title-d', '.section-lead-d',
-    // About
-    '.about-top', '.about-name', '.about-body', '.about-photo-bg',
-    '.about-row-d > *', '.about-photo-d', '.about-text-d > *',
+    // About (text side only — photo layer is absolutely positioned)
+    '.about-top', '.about-name', '.about-body',
+    '.about-text-d > *',
     // Results
     '.stat-card', '.stat-grid > *',
     '.checklist > li',
     '.callout',
-    // Кого ми шукаємо / Audiences
+    // Кого ми шукаємо / Audiences / Formats
     '.team-col', '.fmt-card',
     // Brand
     '.brand-head', '.brand-head > *', '.brand-head-d > *',
     '.brand-body > *', '.brand-body-d > *',
     '.brand-countries > li', '.brand-countries-d > li',
-    '.brand-products-row > *', '.brand-products-row-d > *',
     '.cert-grid > *', '.cert-grid-d > *',
     '.brand-callout', '.brand-callout-d',
     '.brand-cert-text', '.brand-cert-text-d',
@@ -50,9 +52,8 @@
     '.final', '.final > *'
   ];
 
+  // PHOTO kind only for non-absolute, non-pre-transformed elements.
   var PHOTO = [
-    '.hero-photo', '.hero-bg', '.hero-couple-img', '.hero-couple-img-d',
-    '.about-photo-bg', '.about-photo-d', '.about-couple-img', '.about-couple-img-d',
     '.brand-logo', '.brand-logo-d'
   ];
 
@@ -60,8 +61,10 @@
     '.cta'
   ];
 
+  // Polaroids have their own rotate/translate transforms (.r-1..r-4).
+  // We tag only the wrapping pair so the cards keep their CSS-owned rotation.
   var POLAROID = [
-    '.polaroid', '.polaroid-pair', '.polaroid-pair-d'
+    '.polaroid-pair', '.polaroid-pair-d'
   ];
 
   function tag(selectors, kind) {

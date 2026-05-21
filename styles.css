@@ -893,9 +893,10 @@ body{
   list-style:none;
   margin-top:22px;
   display:grid;
-  grid-template-columns:repeat(3, 1fr);
-  gap:6px 16px;
-  font-size:14px;line-height:1.4;color:var(--ink);
+  grid-template-columns:repeat(3, minmax(0, 1fr));
+  gap:6px 10px;
+  font-size:13px;line-height:1.35;color:var(--ink);
+  word-break:keep-all;
 }
 .brand-countries li{
   position:relative;padding-left:14px;
@@ -1039,8 +1040,16 @@ body{
   width:22px;border-radius:4px;background:var(--gold-soft);
 }
 
+@media (max-width:420px){
+  .brand-countries{font-size:12.5px;gap:5px 8px}
+  .brand-countries .fc{font-size:13px}
+}
 @media (max-width:380px){
-  .brand-countries{font-size:13px;gap:5px 12px}
+  .brand-countries{
+    grid-template-columns:repeat(2, minmax(0, 1fr));
+    font-size:13px;gap:6px 14px;
+  }
+  .brand-countries .fc{font-size:14px}
   .cert-list{font-size:13.5px}
   .cat-list li{padding:12px 14px;font-size:13.5px}
 }
@@ -1051,11 +1060,12 @@ body{
    ============================================================ */
 .brand-countries li{
   padding-left:0;
-  display:flex;align-items:center;gap:8px;
+  display:flex;align-items:center;gap:6px;
+  min-width:0;
 }
 .brand-countries li::before{display:none}
 .brand-countries .fc{
-  font-size:15px;line-height:1;flex-shrink:0;
+  font-size:14px;line-height:1;flex-shrink:0;
   filter:drop-shadow(0 1px 1px rgba(0,0,0,.4));
 }
 
