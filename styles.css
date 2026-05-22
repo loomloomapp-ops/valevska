@@ -8,8 +8,8 @@
   --bg-2:#245B3E;
   --bg-3:#103022;
   --bg-4:#06150e;
-  --surface:rgba(22,8,18,.55);
-  --surface-strong:rgba(20,8,16,.78);
+  --surface:rgba(10,30,20,.55);
+  --surface-strong:rgba(8,28,18,.78);
   --surface-2:rgba(255,255,255,.04);
   --border:rgba(244,234,217,.10);
   --border-strong:rgba(244,234,217,.18);
@@ -196,7 +196,7 @@ body{
 .hero-photo{
   position:absolute;inset:0;z-index:0;
   background:
-    radial-gradient(80% 55% at 50% 55%, rgba(180,100,130,.18), transparent 72%);
+    radial-gradient(80% 55% at 50% 55%, rgba(120,200,150,.18), transparent 72%);
   overflow:hidden;
 }
 .hero-photo image-slot{width:100%;height:100%;display:block}
@@ -218,13 +218,13 @@ body{
   background:
     /* darken top for title, reveal photo mid, darken bottom — ends at ~.95 to match next section */
     linear-gradient(180deg,
-      rgba(13,3,10,.45) 0%,
-      rgba(13,3,10,.18) 18%,
-      rgba(13,3,10,0) 38%,
-      rgba(13,3,10,0) 52%,
-      rgba(13,3,10,.55) 72%,
-      rgba(13,3,10,.92) 90%,
-      rgba(13,3,10,.95) 100%);
+      rgba(6,18,12,.45) 0%,
+      rgba(6,18,12,.18) 18%,
+      rgba(6,18,12,0) 38%,
+      rgba(6,18,12,0) 52%,
+      rgba(6,18,12,.55) 72%,
+      rgba(6,18,12,.92) 90%,
+      rgba(6,18,12,.95) 100%);
   pointer-events:none;
 }
 .hero-inner{
@@ -320,7 +320,7 @@ body{
 .nameplate .sub b{color:#1a1208;font-weight:700}
 
 .desc-card{
-  background:rgba(13,3,10,.78);
+  background:rgba(6,18,12,.78);
   border:1px solid var(--border);
   border-radius:16px;
   padding:18px 20px;text-align:center;
@@ -351,7 +351,7 @@ body{
 .ig-chip{
   display:inline-flex;align-items:center;gap:10px;margin-top:12px;
   padding:9px 16px 9px 12px;border-radius:999px;
-  background:rgba(20,8,16,.7);border:1px solid var(--border-strong);
+  background:rgba(8,28,18,.7);border:1px solid var(--border-strong);
   color:var(--ink);text-decoration:none;
   font-size:14px;font-weight:500;letter-spacing:.01em;
 }
@@ -370,7 +370,7 @@ body{
 .stat-card{
   display:flex;align-items:center;gap:14px;
   padding:14px 16px;border-radius:14px;
-  background:linear-gradient(180deg, rgba(48,18,38,.6), rgba(20,8,16,.6));
+  background:linear-gradient(180deg, rgba(18,52,34,.6), rgba(8,28,18,.6));
   border:1px solid var(--border);
 }
 .stat-card .icon{
@@ -439,7 +439,7 @@ body{
 .callout{
   margin-top:22px;
   padding:18px 20px;border-radius:14px;
-  background:rgba(20,8,16,.55);border:1px solid var(--border-gold);
+  background:rgba(8,28,18,.55);border:1px solid var(--border-gold);
   font-size:15px;line-height:1.5;color:var(--ink);
   font-style:italic;
 }
@@ -451,7 +451,7 @@ body{
 .brand-card{
   margin-top:14px;padding:24px 20px;
   border-radius:20px;
-  background:linear-gradient(180deg, rgba(48,18,38,.65), rgba(20,8,16,.65));
+  background:linear-gradient(180deg, rgba(18,52,34,.65), rgba(8,28,18,.65));
   border:1px solid var(--border);box-shadow:var(--shadow-card);
 }
 .brand-card .lead{font-size:15px;line-height:1.55;color:var(--ink-mute)}
@@ -484,7 +484,7 @@ body{
 .cert-pill{
   display:flex;align-items:center;gap:8px;
   padding:10px 12px;border-radius:12px;
-  background:rgba(20,8,16,.55);border:1px solid var(--border);
+  background:rgba(8,28,18,.55);border:1px solid var(--border);
   font-size:12.5px;color:var(--ink-mute);letter-spacing:.02em;
 }
 .cert-pill b{color:var(--gold-soft);font-weight:600;font-size:13px;letter-spacing:.04em;text-transform:uppercase}
@@ -513,7 +513,7 @@ body{
   margin-top:34px;position:relative;
   padding:30px 22px 24px;
   border-radius:22px;
-  background:linear-gradient(180deg, rgba(48,18,38,.85), rgba(20,8,16,.95));
+  background:linear-gradient(180deg, rgba(18,52,34,.85), rgba(8,28,18,.95));
   border:1px solid var(--border-gold);
   box-shadow:var(--shadow-card);
 }
@@ -554,7 +554,7 @@ body{
 .fmt-card{
   margin-top:14px;
   padding:22px 22px;border-radius:18px;
-  background:linear-gradient(180deg, rgba(48,18,38,.65), rgba(20,8,16,.65));
+  background:linear-gradient(180deg, rgba(18,52,34,.65), rgba(8,28,18,.65));
   border:1px solid var(--border);
   box-shadow:var(--shadow-card);
 }
@@ -580,14 +580,14 @@ body{
 .tm-stack{display:flex;flex-direction:column;gap:14px;margin-top:18px}
 .tm-card{
   padding:16px 16px 14px;border-radius:16px;
-  background:rgba(20,8,16,.65);
+  background:rgba(8,28,18,.65);
   border:1px solid var(--border);
   box-shadow:var(--shadow-card);
 }
 .tm-head{display:flex;align-items:center;gap:10px;margin-bottom:10px}
 .tm-avatar{
   width:34px;height:34px;border-radius:50%;
-  background:linear-gradient(135deg,#6a3b4f,#3a1d27);
+  background:linear-gradient(135deg,#2d6a4a,#143d28);
   display:grid;place-items:center;
   color:var(--gold-soft);font-family:'Oswald',sans-serif;font-weight:700;font-size:14px;
 }
@@ -605,7 +605,7 @@ body{
   padding:28px 22px;border-radius:22px;
   background:
     radial-gradient(120% 80% at 50% 0%, rgba(232,200,121,.18), transparent 70%),
-    linear-gradient(180deg, rgba(48,18,38,.85), rgba(20,8,16,.95));
+    linear-gradient(180deg, rgba(18,52,34,.85), rgba(8,28,18,.95));
   border:1px solid var(--border-gold);
   text-align:center;
   box-shadow:var(--shadow-card);
@@ -669,7 +669,7 @@ body{
 }
 .tm-arrow{
   width:44px;height:44px;border-radius:50%;
-  background:rgba(20,8,16,.7);border:1px solid var(--border-strong);
+  background:rgba(8,28,18,.7);border:1px solid var(--border-strong);
   color:var(--gold-soft);
   font-size:22px;line-height:1;font-family:'Oswald',sans-serif;font-weight:600;
   display:grid;place-items:center;cursor:pointer;
@@ -710,7 +710,7 @@ body{
 }
 .brand-logo{
   width:108px;aspect-ratio:1;border-radius:18px;overflow:hidden;
-  background:linear-gradient(180deg, rgba(48,18,38,.55), rgba(20,8,16,.55));
+  background:linear-gradient(180deg, rgba(18,52,34,.55), rgba(8,28,18,.55));
   border:1px solid var(--border);
   box-shadow: inset 0 0 0 1px rgba(255,255,255,.02), 0 6px 14px -6px rgba(0,0,0,.4);
 }
@@ -740,7 +740,7 @@ body{
 .about-photo-bg{
   position:absolute;inset:0;z-index:0;
   background:
-    radial-gradient(70% 50% at 50% 50%, rgba(180,100,130,.18), transparent 70%);
+    radial-gradient(70% 50% at 50% 50%, rgba(120,200,150,.18), transparent 70%);
   overflow:hidden;
 }
 .about-couple-img{
@@ -761,14 +761,14 @@ body{
   background:
     /* match hero's bottom .95 dark at top, fade through to reveal photo mid, deep dark fade at bottom for smooth section transition */
     linear-gradient(180deg,
-      rgba(13,3,10,.95) 0%,
-      rgba(13,3,10,.55) 10%,
-      rgba(13,3,10,.18) 28%,
-      rgba(13,3,10,0) 48%,
-      rgba(13,3,10,.18) 62%,
-      rgba(13,3,10,.55) 78%,
-      rgba(13,3,10,.88) 92%,
-      rgba(13,3,10,1) 100%);
+      rgba(6,18,12,.95) 0%,
+      rgba(6,18,12,.55) 10%,
+      rgba(6,18,12,.18) 28%,
+      rgba(6,18,12,0) 48%,
+      rgba(6,18,12,.18) 62%,
+      rgba(6,18,12,.55) 78%,
+      rgba(6,18,12,.88) 92%,
+      rgba(6,18,12,1) 100%);
   pointer-events:none;
 }
 
@@ -791,7 +791,7 @@ body{
 .about-section .about-body{
   margin-top:auto;
   padding:20px 22px;
-  background:rgba(13,3,10,.78);
+  background:rgba(6,18,12,.78);
   border:1px solid var(--border);
   border-radius:16px;
   backdrop-filter:blur(8px);
@@ -956,7 +956,7 @@ body{
 
 .brand-callout{
   margin-top:22px;padding:18px 22px;border-radius:14px;
-  background:rgba(20,8,16,.7);
+  background:rgba(8,28,18,.7);
   border:1px solid var(--border-gold);
   font-size:14.5px;line-height:1.5;color:var(--ink);
   text-align:center;
@@ -987,7 +987,7 @@ body{
 .cat-list li{
   display:flex;align-items:center;gap:12px;
   padding:14px 16px;border-radius:12px;
-  background:rgba(20,8,16,.55);
+  background:rgba(8,28,18,.55);
   border:1px solid var(--border);
   font-size:14.5px;line-height:1.35;color:var(--ink);
 }
@@ -1020,7 +1020,7 @@ body{
 }
 .product-banner-slider .tm-arrow{
   width:36px;height:36px;border-radius:50%;
-  background:rgba(20,8,16,.7);border:1px solid var(--border-strong);
+  background:rgba(8,28,18,.7);border:1px solid var(--border-strong);
   color:var(--gold-soft);
   font-size:18px;line-height:1;font-family:'Oswald',sans-serif;font-weight:600;
   display:grid;place-items:center;cursor:pointer;
@@ -1166,7 +1166,7 @@ body{
   padding:12px 14px;
   border-radius:12px;
   background:
-    linear-gradient(180deg, rgba(48,18,38,.72), rgba(20,8,16,.72));
+    linear-gradient(180deg, rgba(18,52,34,.72), rgba(8,28,18,.72));
   border:1px solid var(--border-gold);
   box-shadow:
     inset 0 1px 0 rgba(255,255,255,.04),
