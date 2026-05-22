@@ -43,37 +43,29 @@ body{
 }
 
 /* Per-section gradient "breath" — soft green glow in the middle, transparent at edges so adjacent sections blend without a visible seam */
-.section{position:relative;isolation:isolate}
-.section::before{
-  content:"";
-  position:absolute;inset:0;
+.section{
   background:linear-gradient(180deg,
     transparent 0%,
-    rgba(36,91,62,.16) 28%,
-    rgba(36,91,62,.20) 50%,
-    rgba(36,91,62,.16) 72%,
-    transparent 100%);
-  pointer-events:none;
-  z-index:-1;
-}
-/* Slightly different tint on every other section so it feels alive */
-.section:nth-of-type(even)::before{
-  background:linear-gradient(180deg,
-    transparent 0%,
-    rgba(22,72,46,.18) 32%,
-    rgba(22,72,46,.22) 50%,
-    rgba(22,72,46,.18) 68%,
+    rgba(46,118,80,.42) 22%,
+    rgba(58,140,96,.55) 50%,
+    rgba(46,118,80,.42) 78%,
     transparent 100%);
 }
-.final{position:relative;isolation:isolate}
-.final::before{
-  content:"";position:absolute;inset:0;
+/* Even sections — slightly deeper, more saturated tint, for a visible rhythm */
+.section:nth-of-type(even){
   background:linear-gradient(180deg,
     transparent 0%,
-    rgba(36,91,62,.18) 40%,
-    rgba(36,91,62,.22) 60%,
+    rgba(28,86,56,.42) 22%,
+    rgba(38,108,72,.58) 50%,
+    rgba(28,86,56,.42) 78%,
     transparent 100%);
-  pointer-events:none;z-index:-1;
+}
+.final{
+  background:linear-gradient(180deg,
+    transparent 0%,
+    rgba(46,118,80,.45) 35%,
+    rgba(58,140,96,.55) 60%,
+    transparent 100%);
 }
 
 /* Mobile column centred on wider viewports */
