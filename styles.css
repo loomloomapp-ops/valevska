@@ -4,10 +4,10 @@
    ============================================================ */
 
 :root{
-  --bg-1:#2a0d22;
-  --bg-2:#3d1532;
-  --bg-3:#1a0716;
-  --bg-4:#0d030a;
+  --bg-1:#1a4530;
+  --bg-2:#245B3E;
+  --bg-3:#103022;
+  --bg-4:#06150e;
   --surface:rgba(22,8,18,.55);
   --surface-strong:rgba(20,8,16,.78);
   --surface-2:rgba(255,255,255,.04);
@@ -28,7 +28,7 @@
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{background:#020806}
+html,body{background:#04130a}
 body{
   font-family:'Inter',system-ui,sans-serif;
   color:var(--ink);
@@ -36,8 +36,8 @@ body{
   text-rendering:optimizeLegibility;
   min-height:100vh;
   background:
-    radial-gradient(80% 40% at 50% 20%, rgba(180,100,130,.12), transparent 70%),
-    radial-gradient(60% 35% at 5% 60%, rgba(140,60,90,.10), transparent 60%),
+    radial-gradient(80% 40% at 50% 20%, rgba(120,200,150,.14), transparent 70%),
+    radial-gradient(60% 35% at 5% 60%, rgba(70,150,110,.12), transparent 60%),
     linear-gradient(180deg, var(--bg-2) 0%, var(--bg-3) 45%, var(--bg-4) 100%);
   background-attachment:fixed;
 }

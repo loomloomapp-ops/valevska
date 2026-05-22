@@ -5,10 +5,10 @@
    ============================================================ */
 
 :root{
-  --bg-1:#2a0d22;
-  --bg-2:#3d1532;
-  --bg-3:#1a0716;
-  --bg-4:#0d030a;
+  --bg-1:#1a4530;
+  --bg-2:#245B3E;
+  --bg-3:#103022;
+  --bg-4:#06150e;
   --surface:rgba(22,8,18,.55);
   --surface-strong:rgba(20,8,16,.78);
   --border:rgba(244,234,217,.10);
@@ -30,7 +30,7 @@
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{background:#020806}
+html,body{background:#04130a}
 body{
   font-family:'Inter',system-ui,sans-serif;
   color:var(--ink);
@@ -38,8 +38,8 @@ body{
   text-rendering:optimizeLegibility;
   min-height:100vh;
   background:
-    radial-gradient(60% 35% at 85% 0%, rgba(180,100,130,.20), transparent 60%),
-    radial-gradient(50% 30% at 5% 18%, rgba(140,60,90,.18), transparent 60%),
+    radial-gradient(60% 35% at 85% 0%, rgba(120,200,150,.22), transparent 60%),
+    radial-gradient(50% 30% at 5% 18%, rgba(70,150,110,.20), transparent 60%),
     linear-gradient(180deg, var(--bg-2) 0%, var(--bg-1) 25%, var(--bg-3) 60%, var(--bg-4) 100%);
   background-attachment:fixed;
 }
