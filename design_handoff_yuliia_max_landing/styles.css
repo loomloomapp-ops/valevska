@@ -4,10 +4,10 @@
    ============================================================ */
 
 :root{
-  --bg-1:#1a4530;
-  --bg-2:#245B3E;
-  --bg-3:#103022;
-  --bg-4:#06150e;
+  --bg-1:#143c28;
+  --bg-2:#1a4a32;
+  --bg-3:#0c2418;
+  --bg-4:#040d08;
   --surface:rgba(10,30,20,.55);
   --surface-strong:rgba(8,28,18,.78);
   --surface-2:rgba(255,255,255,.04);
@@ -28,7 +28,7 @@
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{background:#04130a}
+html,body{background:#040d08}
 body{
   font-family:'Inter',system-ui,sans-serif;
   color:var(--ink);
@@ -36,10 +36,19 @@ body{
   text-rendering:optimizeLegibility;
   min-height:100vh;
   background:
-    radial-gradient(80% 40% at 50% 20%, rgba(120,200,150,.14), transparent 70%),
-    radial-gradient(60% 35% at 5% 60%, rgba(70,150,110,.12), transparent 60%),
-    linear-gradient(180deg, var(--bg-2) 0%, var(--bg-3) 45%, var(--bg-4) 100%);
-  background-attachment:fixed;
+    radial-gradient(90% 50% at 50% 8%, rgba(120,200,150,.10), transparent 70%),
+    radial-gradient(70% 40% at 0% 35%, rgba(70,150,110,.08), transparent 70%),
+    linear-gradient(180deg,
+      #1a4a32 0%,
+      #173f2b 10%,
+      #143524 20%,
+      #122d1f 30%,
+      #0f2619 42%,
+      #0c1f14 55%,
+      #091811 70%,
+      #061310 82%,
+      #040d08 100%);
+  background-attachment:scroll;
 }
 
 /* Mobile column centred on wider viewports */
@@ -222,9 +231,9 @@ body{
       rgba(6,18,12,.18) 18%,
       rgba(6,18,12,0) 38%,
       rgba(6,18,12,0) 52%,
-      rgba(6,18,12,.55) 72%,
-      rgba(6,18,12,.92) 90%,
-      rgba(6,18,12,.95) 100%);
+      rgba(6,18,12,.35) 72%,
+      rgba(6,18,12,.55) 88%,
+      rgba(6,18,12,.65) 100%);
   pointer-events:none;
 }
 .hero-inner{
@@ -343,7 +352,7 @@ body{
 }
 .about-photo{
   position:relative;aspect-ratio:3/4;border-radius:14px;overflow:hidden;
-  background:#1a0a14;border:1px solid var(--border);
+  background:#0a1a12;border:1px solid var(--border);
   box-shadow:var(--shadow-card);align-self:start;
 }
 .about-photo image-slot{width:100%;height:100%;display:block}
@@ -431,7 +440,7 @@ body{
 }
 .photo-strip .ph{
   aspect-ratio:3/4;border-radius:12px;overflow:hidden;
-  background:#1a0a14;border:1px solid var(--border);
+  background:#0a1a12;border:1px solid var(--border);
 }
 .photo-strip image-slot{width:100%;height:100%;display:block}
 
@@ -473,7 +482,7 @@ body{
 
 .brand-photo{
   margin-top:20px;aspect-ratio:5/4;border-radius:14px;overflow:hidden;
-  background:#1a0a14;border:1px solid var(--border);
+  background:#0a1a12;border:1px solid var(--border);
   position:relative;
 }
 .brand-photo image-slot{width:100%;height:100%;display:block}
@@ -527,7 +536,7 @@ body{
 }
 .slim-photo{
   margin-top:6px;aspect-ratio:5/4;border-radius:14px;overflow:hidden;
-  background:#1a0a14;border:1px solid var(--border);
+  background:#0a1a12;border:1px solid var(--border);
 }
 .slim-photo image-slot{width:100%;height:100%;display:block}
 .slim-label{
@@ -659,7 +668,7 @@ body{
   flex:0 0 80%;scroll-snap-align:center;
   aspect-ratio: 9 / 16;
   border-radius:20px;overflow:hidden;
-  background:#1a0a14;border:1px solid var(--border);
+  background:#0a1a12;border:1px solid var(--border);
   box-shadow:var(--shadow-card);
 }
 .tm-slide image-slot{width:100%;height:100%;display:block}
@@ -761,14 +770,13 @@ body{
   background:
     /* match hero's bottom .95 dark at top, fade through to reveal photo mid, deep dark fade at bottom for smooth section transition */
     linear-gradient(180deg,
-      rgba(6,18,12,.95) 0%,
-      rgba(6,18,12,.55) 10%,
-      rgba(6,18,12,.18) 28%,
+      rgba(6,18,12,.7) 0%,
+      rgba(6,18,12,.4) 12%,
+      rgba(6,18,12,.15) 28%,
       rgba(6,18,12,0) 48%,
-      rgba(6,18,12,.18) 62%,
-      rgba(6,18,12,.55) 78%,
-      rgba(6,18,12,.88) 92%,
-      rgba(6,18,12,1) 100%);
+      rgba(6,18,12,.15) 62%,
+      rgba(6,18,12,.4) 80%,
+      rgba(6,18,12,.6) 100%);
   pointer-events:none;
 }
 
@@ -831,7 +839,7 @@ body{
 }
 .polaroid image-slot{
   width:100%;height:calc(100% - 16px);
-  display:block;border-radius:2px;overflow:hidden;background:#1a0a14;
+  display:block;border-radius:2px;overflow:hidden;background:#0a1a12;
 }
 
 /* alternating rotation + offset, like spread photos */
@@ -926,7 +934,7 @@ body{
 }
 .brand-product-card image-slot{
   width:100%;height:calc(100% - 14px);
-  display:block;border-radius:2px;overflow:hidden;background:#1a0a14;
+  display:block;border-radius:2px;overflow:hidden;background:#0a1a12;
 }
 .brand-product-card.r-a{transform:rotate(-5deg) translate(8px, 4px);z-index:2}
 .brand-product-card.r-b{transform:rotate(6deg) translate(-8px, -2px);margin-left:-22px;z-index:1}
@@ -1009,7 +1017,7 @@ body{
   flex:0 0 64%;scroll-snap-align:center;
   aspect-ratio: 9 / 12;
   border-radius:16px;overflow:hidden;
-  background:#1a0a14;border:1px solid var(--border);
+  background:#0a1a12;border:1px solid var(--border);
   box-shadow:var(--shadow-card);
 }
 .product-banner-slide image-slot{width:100%;height:100%;display:block}
@@ -1096,7 +1104,7 @@ body{
 
 .income-photo{
   position:relative;border-radius:14px;overflow:hidden;
-  background:#1a0a14;border:1px solid var(--border);
+  background:#0a1a12;border:1px solid var(--border);
   box-shadow:var(--shadow-card);
   align-self:stretch;min-height:100%;
 }
