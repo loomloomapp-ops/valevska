@@ -28,7 +28,7 @@
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{background:#040d08}
+html,body{background:#091d12}
 body{
   font-family:'Inter',system-ui,sans-serif;
   color:var(--ink);
@@ -36,19 +36,44 @@ body{
   text-rendering:optimizeLegibility;
   min-height:100vh;
   background:
-    radial-gradient(90% 50% at 50% 8%, rgba(120,200,150,.10), transparent 70%),
-    radial-gradient(70% 40% at 0% 35%, rgba(70,150,110,.08), transparent 70%),
-    linear-gradient(180deg,
-      #1a4a32 0%,
-      #173f2b 10%,
-      #143524 20%,
-      #122d1f 30%,
-      #0f2619 42%,
-      #0c1f14 55%,
-      #091811 70%,
-      #061310 82%,
-      #040d08 100%);
+    radial-gradient(80% 40% at 50% 0%, rgba(120,200,150,.10), transparent 65%),
+    radial-gradient(70% 35% at 100% 80%, rgba(70,150,110,.06), transparent 70%),
+    #091d12;
   background-attachment:scroll;
+}
+
+/* Per-section gradient "breath" — soft green glow in the middle, transparent at edges so adjacent sections blend without a visible seam */
+.section{position:relative;isolation:isolate}
+.section::before{
+  content:"";
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,
+    transparent 0%,
+    rgba(36,91,62,.16) 28%,
+    rgba(36,91,62,.20) 50%,
+    rgba(36,91,62,.16) 72%,
+    transparent 100%);
+  pointer-events:none;
+  z-index:-1;
+}
+/* Slightly different tint on every other section so it feels alive */
+.section:nth-of-type(even)::before{
+  background:linear-gradient(180deg,
+    transparent 0%,
+    rgba(22,72,46,.18) 32%,
+    rgba(22,72,46,.22) 50%,
+    rgba(22,72,46,.18) 68%,
+    transparent 100%);
+}
+.final{position:relative;isolation:isolate}
+.final::before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,
+    transparent 0%,
+    rgba(36,91,62,.18) 40%,
+    rgba(36,91,62,.22) 60%,
+    transparent 100%);
+  pointer-events:none;z-index:-1;
 }
 
 /* Mobile column centred on wider viewports */
